@@ -10,7 +10,7 @@ RUN npm install
 
 RUN npm install -g nodemon
 
-COPY ./app.js app.js
+COPY . /app
 
 EXPOSE 8080
 

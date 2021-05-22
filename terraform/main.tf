@@ -3,7 +3,7 @@
 resource "null_resource" "build" {
   provisioner "local-exec" {
     command = <<EOF
-        docker build -t ${var.image_name} ../app/
+        docker build -t ${var.image_name} ../src/
     EOF
   }
 }
@@ -25,12 +25,6 @@ resource "docker_container" "test" {
   ports {
     internal = var.internal_port
     external = var.external_port
-  }
-
-  volumes {
-    container_path = "/myapp"
-    host_path = "${path.cwd}/app"
-    read_only = false
   }
 }
 
