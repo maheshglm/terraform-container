@@ -29,7 +29,7 @@ resource "docker_container" "test" {
 
   volumes {
     container_path = "/myapp"
-    host_path = "/Users/maheshgummaraju/Documents/Projects/DevOps/Terraform/Bigpay/challenge1/app"
+    host_path = "${path.cwd}/app"
     read_only = false
   }
 }
