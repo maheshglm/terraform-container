@@ -8,7 +8,7 @@ instructions
 
 1. Install Terraform
 2. Clone the repo into local folder
-3. `cd` into `challenge1\terraform`
+3. `cd` into `terraform-container\terraform`
 4. Run `terraform init`
 5. Run `terraform apply -auto-approve`
 6. Run `docker ps` to verify `test-app` container is running on `8080` port
